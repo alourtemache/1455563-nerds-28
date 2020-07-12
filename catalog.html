@@ -57,164 +57,269 @@
             Магазин готовых шаблонов
           </h1>
         </div>
-        <form class="shop-criterion">
-          <div class="shop-catalog">
-            <p class="price">
-              СТОИМОСТЬ:
-            </p>
-            <div class="range-control">
-              <div class="scale">
-                <div class="bar"></div>
+
+        <div class="catalog-choice">
+          <form class="shop-criterion">
+            <fieldset class="filter-item">
+              <div class="shop-catalog">
+                <p class="price">
+                  СТОИМОСТЬ:
+                </p>
+                <div class="range-control">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="price-control">
+                <label class="minimal" for="min-price">ОТ <input type="number" class="number-box" id="min-price" value="0"></label>
+                <label class="maximum" for="max-price">ДО <input type="number" class="number-box" id="max-price" value="15000"></label>
+              </div>
+            </fieldset>
+
+            <div class="grid">
+              <ul class="check-one">
+                <li class="grid-choice">
+                  СЕТКА:
+                </li>
+                <li>
+                  <label for="adaptive" class="grid-label">
+                    <input type="radio" name="grid-radio" class="check-radio" id="adaptive" checked>
+                    <span class="radio-box"></span>
+                    Адаптивная
+                  </label>
+                </li>
+                <li>
+                  <label for="fixed" class="grid-label">
+                    <input type="radio" name="grid-radio" class="check-radio" id="fixed">
+                    <span class="radio-box"></span>
+                    Фиксированная
+                  </label>
+                </li>
+                <li>
+                  <label for="rubber" class="grid-label">
+                    <input type="radio" name="grid-radio" class="check-radio" id="rubber">
+                    <span class="radio-box"></span>
+                    Резиновая
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="specifications">
+              <ul class="checkboxes">
+                <li class="sort-specific">
+                  ОСОБЕННОСТИ:
+                </li>
+                <li>
+                  <label for="slider" class="grid-label">
+                    <input type="checkbox" class="checkbox" id="slider" checked>
+                    <span class="check-box"></span>
+                    Слайдер
+                  </label>
+                </li>
+                <li>
+                  <label for="b-advantages" class="grid-label">
+                    <input type="checkbox" class="checkbox" id="b-advantages">
+                    <span class="check-box"></span>
+                    Блок преимуществ
+                  </label>
+                </li>
+                <li>
+                  <label for="news" class="grid-label">
+                    <input type="checkbox" class="checkbox" id="news" checked>
+                    <span class="check-box"></span>
+                    Новости
+                  </label>
+                </li>
+                <li>
+                  <label for="gallery" class="grid-label">
+                    <input type="checkbox" class="checkbox" id="gallery">
+                    <span class="check-box"></span>
+                    Галерея
+                  </label>
+                </li>
+                <li>
+                  <label for="cart-option" class="grid-label">
+                    <input type="checkbox" class="checkbox" id="cart-option">
+                    <span class="check-box"></span>
+                    Корзина
+                  </label>
+                </li>
+              </ul>
+              <button type="submit" class="show-result">
+                ПОКАЗАТЬ
+              </button>
+            </div>
+          </form>
+
+          <div class="examples">
+            <form>
+              <div class="found">
+                <h3 class="found-type found-sort">
+                  СОРТИРОВАТЬ:
+                </h3>
+                <ul class="found-list">
+                  <li class="found-type">
+                    <a href="#" class="found-price">
+                      ПО ЦЕНЕ
+                    </a>
+                  </li>
+                  <li class="found-type">
+                    <a href="#" class="found-typing">
+                      ПО ТИПУ
+                    </a>
+                  </li>
+                  <li class="found-type">
+                    <a href="#" class="found-rating">
+                      ПО НАЗВАНИЮ
+                    </a>
+                  </li>
+                  <li class="found-type up-down">
+                    <span class="up-button">
+                      <a href="#">
+                        <img src="img/icon-down.svg" width="11" height="10" alt="По убыванию">
+                      </a>
+                    </span>
+                    <span class="down-button">
+                      <a href="#">
+                        <img src="img/icon-up.svg" width="11" height="10" alt="По возрастанию">
+                      </a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </form>
+
+            <div class="big-web-samples">
+              <div class="first-group">
+                <div class="sample sample-price">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/sedona.png" width="360" height="580" alt="Сайт Седона" class="site">
+                  <div class="add-sedona">
+                    <p class="text-head-info">
+                      SEDONA
+                    </p>
+                    <p class="line-info">
+                      Информационный сайт
+                      <br>
+                      для туристов
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+                <div class="sample">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/pink-app.png" width="358" height="578" alt="Сайт приложения PINK" class="site">
+                  <div class="add-pink">
+                    <p class="text-head-info">
+                      PINK APP
+                    </p>
+                    <p class="line-info">
+                      Продуктовый лендинг
+                      <br>
+                      приложения для iOS и Android
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="second-group">
+                <div class="sample">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/borodinski.png" width="358" height="578" alt="Сайт Borodinski" class="site">
+                  <div class="add-beard">
+                    <p class="text-head-info">
+                      BARBERSHOP
+                    </p>
+                    <p class="line-info">
+                      Сайт салона красоты.
+                      <br>
+                      Для мужчин, да.
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+                <div class="sample">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka" class="site">
+                  <div class="add-bear">
+                    <p class="head-info">
+                      MISHKA
+                    </p>
+                    <p class="line-info">
+                      Интернет-магазин
+                      <br>
+                      вязаных игрушек
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="third-group">
+                <div class="sample">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/a-study.png" width="358" height="578" alt="Сайт обучающей платформы" class="site">
+                  <div class="add-study">
+                    <p class="text-head-info">
+                      A PLUS
+                    </p>
+                    <p class="line-info">
+                      Лендинг курсов повышения
+                      <br>
+                      квалификации
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+                <div class="sample">
+                  <img src="img/browser.svg" width="360" height="40" alt="#" class="browser">
+                  <img src="img/kvas.png" width="358" height="578" alt="Сайт КВАСТ" class="site">
+                  <div class="add-drink">
+                    <p class="text-head-info">
+                      КВАСТ
+                    </p>
+                    <p class="line-info">
+                      Промо-сайт производителя
+                      <br>
+                      крафтового кваса
+                    </p>
+                    <button type="submit" class="buy-button">
+                      9 900 ₽
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pages">
+              <a href="#" class="page-number one">
+                1
+              </a>
+              <a href="#" class="page-number">
+                2
+              </a>
+              <a href="#" class="page-number">
+                3
+              </a>
+              <a href="#" class="next-page">СЛЕДУЮЩАЯ</a>
             </div>
           </div>
-          <div class="price-control">
-            <label class="minimal" for="min-price">ОТ <input type="number" id="min-price" value="0"></label>
-            <label class="maximum" for="max-price">ДО <input type="number" id="max-price" value="15000"></label>
-          </div>
-
-          <div class="grid">
-            <ul class="check-one">
-              <li class="grid-choice">
-                СЕТКА:
-              </li>
-              <li>
-                <label for="adaptive">
-                  <input type="radio" name="grid-radio" class="check-radio" id="adaptive" checked>
-                  Адаптивная
-                </label>
-              </li>
-              <li>
-                <label for="fixed">
-                  <input type="radio" name="grid-radio" class="check-radio" id="fixed">
-                  Фиксированная
-                </label>
-              </li>
-              <li>
-                <label for="rubber">
-                  <input type="radio" name="grid-radio" class="check-radio" id="rubber">
-                  Резиновая
-                </label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="specifications">
-            <ul class="checkboxes">
-              <li class="sort-specific">
-                ОСОБЕННОСТИ:
-              </li>
-              <li>
-                <label for="slider">
-                  <input type="checkbox" class="checkbox" id="slider" checked>
-                  Слайдер
-                </label>
-              </li>
-              <li>
-                <label for="b-advantages">
-                  <input type="checkbox" class="checkbox" id="b-advantages">
-                  Блок преимуществ
-                </label>
-              </li>
-              <li>
-                <label for="news">
-                  <input type="checkbox" class="checkbox" id="news" checked>
-                  Новости
-                </label>
-              </li>
-              <li>
-                <label for="gallery">
-                  <input type="checkbox" class="checkbox" id="gallery">
-                  Галерея
-                </label>
-              </li>
-              <li>
-                <label for="cart-option">
-                  <input type="checkbox" class="checkbox" id="cart-option">
-                  Корзина
-                </label>
-              </li>
-            </ul>
-            <button type="submit" class="show-result">
-              ПОКАЗАТЬ
-            </button>
-          </div>
-        </form>
-
-        <form>
-          <div class="found">
-            <ul class="found-list">
-              <li class="found-type found-sort">
-                СОРТИРОВАТЬ:
-              </li>
-              <li class="found-type">
-                <a href="#" class="found-price">
-                  ПО ЦЕНЕ
-                </a>
-              </li>
-              <li class="found-type">
-                <a href="#" class="found-typing">
-                  ПО ТИПУ
-                </a>
-              </li>
-              <li class="found-type">
-                <a href="#" class="found-rating">
-                  ПО НАЗВАНИЮ
-                </a>
-              </li>
-              <li class="found-type up-down">
-                <span class="up-button">
-                  <a href="#">
-                    <img src="img/icon-down.svg" width="11" height="10" alt="По убыванию">
-                  </a>
-                </span>
-                <span class="down-button">
-                  <a href="#">
-                    <img src="img/icon-up.svg" width="11" height="10" alt="По возрастанию">
-                  </a>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </form>
-
-        <div class="web-samples">
-          <div class="sample sample-price">
-            <img src="img/sedona.png" width="360" height="580" alt="Сайт Седона">
-          </div>
-          <div class="sample">
-            <img src="img/pink-app.png" width="358" height="578" alt="Сайт приложения PINK">
-          </div>
-          <div class="sample">
-            <img src="img/borodinski.png" width="358" height="578" alt="Сайт Borodinski">
-          </div>
-          <div class="sample">
-            <img src="img/mishka.png" width="358" height="578" alt="Сайт Mishka">
-          </div>
-          <div class="sample">
-            <img src="img/a-study.png" width="358" height="578" alt="Сайт обучающей платформы">
-          </div>
-          <div class="sample">
-            <img src="img/kvas.png" width="358" height="578" alt="Сайт КВАСТ">
-          </div>
         </div>
 
-        <div class="pages">
-          <a href="#">
-            1
-          </a>
-          <a href="#">
-            2
-          </a>
-          <a href="#">
-            3
-          </a>
-          <a href="#">СЛЕДУЮЩАЯ</a>
-        </div>
-
-        <form class="address">
+        <form class="address-catalog">
           <p class="nerds-studio">
             NЁRDS DESIGN STUDIO
           </p>
@@ -231,8 +336,8 @@
           </button>
         </form>
 
-        <img src="img/map-marker.png" width="231" height="190" alt="Местоположение студии" class="pin">
-        <img src="img/map.png" width="1440" height="416" alt="Карта местоположения">
+        <img src="img/map-marker.png" width="231" height="190" alt="Местоположение студии" class="pin-catalog">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sdz!4v1594578357963!5m2!1sru!2sdz" width="1440" height="416" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </main>
 
       <footer class="page-footer">
@@ -266,4 +371,3 @@
   </body>
 
 </html>
-
